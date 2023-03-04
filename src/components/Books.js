@@ -1,4 +1,5 @@
 import '../styles/books.css';
+import Form from './Form';
 
 const Books = () => (
   <div className="booksDiv">
@@ -89,19 +90,7 @@ const Books = () => (
         </div>
       </div>
     </div>
-    <div className="addBookDiv">
-      <div className="addBook">
-        <h3>ADD NEW BOOK</h3>
-        <input placeholder="Book Title" />
-        <select>
-          <option value="Category">Category</option>
-          <option value="Action">Action</option>
-          <option value="Action">Science Fiction</option>
-          <option value="Action">Economy</option>
-        </select>
-        <button type="button" className="addBookButton">ADD BOOK</button>
-      </div>
-    </div>
+    <Form />
   </div>
 );
 
