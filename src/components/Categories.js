@@ -1,5 +1,9 @@
+import '../styles/categories.css';
+
 const Categories = () => (
-  <p>Categories Page</p>
+  <div className="CategoriesDiv">
+    <p>Categories Page</p>
+  </div>
 );
 
 export default Categories;
