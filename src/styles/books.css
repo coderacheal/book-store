@@ -1,7 +1,14 @@
+/* <style> */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;500;600&display=swap');
+/* </style> */
+/* <style> */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,300&family=Roboto+Slab:wght@300;500;600&display=swap');
+/* </style> */
+
 .booksDiv {
   border: 1px solid rgb(217, 216, 216);
   border-top: 0;
-  width: 70%;
+  width: 85%;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 30px 0;
@@ -32,6 +39,8 @@
 
 .bookTitle {
   color: #343434;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 700;
 }
 
 .commentRemoveEditDiv {
@@ -58,6 +67,8 @@
 
 h2, p {
   margin: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 200;
 }
 
 .currentChapter {
@@ -107,6 +118,7 @@ p {
 span {
   color: #121212;
   opacity: 0.5;
+  font-family: 'Monserat', sans-serif;
 }
 
 .Bottomline {
