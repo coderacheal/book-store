@@ -9,9 +9,9 @@ const Books = () => (
           <h2 className="bookTitle">The Hunger Games</h2>
           <p>Susanne Collins</p>
           <div className="commentRemoveEditDiv">
-            <p>Comments</p>
-            <p className="commentRemoveEdit">Remove</p>
-            <p className="commentRemoveEdit">Edit</p>
+            <p className="commentRemoveEditEffects">Comments</p>
+            <p className="commentRemoveEditEffects">Remove</p>
+            <p className="commentRemoveEditEffects">Edit</p>
           </div>
         </div>
         <div className="completedRing">

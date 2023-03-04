@@ -5,9 +5,9 @@ const Navbar = () => (
   <div>
     <div className="ulDiv">
       <ul>
-        <h2>BookStore CMS</h2>
-        <li><Link to="/">BOOKS</Link></li>
-        <li><Link to="categories">CATEGORIES</Link></li>
+        <h2 style={{ fontWeight: 'bold' }}>BookStore CMS</h2>
+        <li><Link to="/" className="links">BOOKS</Link></li>
+        <li><Link to="categories" className="links">CATEGORIES</Link></li>
       </ul>
     </div>
   </div>

@@ -45,6 +45,10 @@
   margin-top: 20px;
 }
 
+.commentRemoveEditEffects {
+  cursor: pointer;
+}
+
 .completedRing {
   display: flex;
   margin-top: 20px;
@@ -97,6 +101,14 @@ h2, p {
   background-color: #0290ff;
   color: white;
   border: 0;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.progressButton:hover {
+  background-color: white;
+  color: #0290ff;
+  border: 1px solid #0290ff;
 }
 
 .commentRemoveEdit {
