@@ -3,7 +3,6 @@ import '../styles/Navbar.css';
 
 const Navbar = () => (
   <div>
-    {/* <div className="header"> */}
     <div className="ulDiv">
       <ul>
         <h2>BookStore CMS</h2>
@@ -11,7 +10,6 @@ const Navbar = () => (
         <li><Link to="categories">CATEGORIES</Link></li>
       </ul>
     </div>
-    {/* </div> */}
   </div>
 );
 

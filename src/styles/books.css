@@ -1,9 +1,5 @@
-/* <style> */
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;500;600&display=swap');
-/* </style> */
-/* <style> */
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,300&family=Roboto+Slab:wght@300;500;600&display=swap');
-/* </style> */
 
 .booksDiv {
   border: 1px solid rgb(217, 216, 216);
@@ -26,7 +22,6 @@
 .eachBook {
   width: 95%;
   margin: auto;
-  /* background-color: red; */
   display: grid;
   grid-template-columns: 2fr 1.3fr 1fr;
 }
@@ -62,7 +57,6 @@
   border-radius: 60%; 
   border-width: 5px;
   border-left-color: #dedada;
-  /* border-image-slice: 1; */
 }
 
 h2, p {
@@ -127,7 +121,6 @@ span {
 }
 
 .addBookDiv {
-  /* background-color: white; */
   width: 90%;
   margin: auto;
   margin-top: 30px;
@@ -140,7 +133,6 @@ span {
   color: #5a5a5a;
   
   width: 95%;
-  /* background-color: red; */
   margin:auto;
 }
 
@@ -159,9 +151,3 @@ select {
   color: #969696;
   outline: none;
 }
-
-
-
-/* .addBookButton {
-  width: 20%;
-} */
