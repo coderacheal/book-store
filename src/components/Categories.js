@@ -1,5 +1,5 @@
-const Categories = () => {
-  <p>Categories Page</p>;
-};
+const Categories = () => (
+  <p>Categories Page</p>
+);
 
 export default Categories;
