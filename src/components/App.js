@@ -1,4 +1,4 @@
-import './styles/App.css';
+import '../styles/App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Books from './Books';
@@ -9,9 +9,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/books" element={<Books />} />
+        <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
-        <Route></Route>
       </Routes>
     </>
   );
