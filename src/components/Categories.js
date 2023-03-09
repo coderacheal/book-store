@@ -1,9 +1,13 @@
 import '../styles/categories.css';
+import { useSelector } from 'react-redux';
 
-const Categories = () => (
-  <div className="CategoriesDiv">
-    <p>Categories Page Under Construction</p>
-  </div>
-);
+const Categories = () => {
+  const notReady = useSelector((state) => state.categories.underconstruction);
+  return (
+    <div className="CategoriesDiv">
+      <p>{notReady}</p>
+    </div>
+  );
+};
 
 export default Categories;
