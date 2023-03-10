@@ -1,12 +1,12 @@
 import '../styles/categories.css';
+import { useState } from 'react';
 
 const Categories = () => {
-  const notReady = 'Under Construction';
-  return (
+  const [status, setStatus] = useState('Page Under Construction');
+
     <div className="CategoriesDiv">
-      <p>{notReady}</p>
-    </div>
-  );
+      <div>{status}</div>
+    </div>;
 };
 
 export default Categories;

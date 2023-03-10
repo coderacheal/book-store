@@ -116,11 +116,16 @@ p {
   transition: 1s;
 }
 
-.progressButton:hover {
-  background-color: white;
-  color: #0290ff;
-  border: 1px solid #0290ff;
+.progressButton:active {
+  opacity: 0.7;
 }
+
+/* .progressButton:active {
+  background-color: #0290ff;
+  color: white;
+  border: 1px solid #0290ff;
+  transition: 1s;
+} */
 
 .commentRemoveEdit {
   border-left: 2px solid #cecece;

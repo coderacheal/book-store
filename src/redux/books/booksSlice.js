@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
   booksList: [
@@ -28,7 +29,15 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
-      state.booksList = [...state.booksList, action.payload];
+      const newBook = {
+        item_id: uuidv4(),
+        title: action.payload.title,
+        author: action.payload.author,
+      };
+      return {
+        ...state,
+        booksList: [...state.booksList, newBook],
+      };
     },
     removeBook: (state, { payload }) => ({
       ...state,

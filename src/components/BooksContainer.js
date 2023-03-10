@@ -1,7 +1,7 @@
 import React from 'react';
 // import booksReducer from '../redux/books/booksSlice';
 import { useSelector } from 'react-redux';
-import Books from './Books';
+import Book from './Books';
 import Form from './Form';
 
 const BooksContainer = () => {
@@ -9,7 +9,7 @@ const BooksContainer = () => {
 
   return (
     <div className="booksDiv">
-      {booksList.map((item) => <Books key={item.item_id} {...item} />)}
+      {booksList.map((item) => <Book key={item.item_id} {...item} />)}
       <Form />
     </div>
   );

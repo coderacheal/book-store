@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import '../styles/books.css';
 
-const Books = ({ item_id, title, author, category }) => {
+const Book = ({
+  item_id, title, author, category,
+}) => {
   const dispatch = useDispatch();
   return (
     <div className="eachBookDiv">
@@ -45,16 +47,15 @@ const Books = ({ item_id, title, author, category }) => {
   );
 };
 
-Books.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  item_id: PropTypes.string,
+Book.propTypes = {
+  item_id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  category: PropTypes.string,
 };
 
-Books.defaultProps = {
-  item_id: '',
+Book.defaultProps = {
+  category: 'Non-Fiction',
 };
 
-export default Books;
+export default Book;
