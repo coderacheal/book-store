@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  underconstruction: 'Page Under Construction',
+  underconstruction: [],
 };
 
 const categoriesSlicer = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    notAvailable: (state) => state.underconstruction,
+    notAvailable: (state) => 'Under Construction',
   },
 });
 

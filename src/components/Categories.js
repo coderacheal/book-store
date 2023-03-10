@@ -1,8 +1,7 @@
 import '../styles/categories.css';
-import { useSelector } from 'react-redux';
 
 const Categories = () => {
-  const notReady = useSelector((state) => state.categories.underconstruction);
+  const notReady = 'Under Construction';
   return (
     <div className="CategoriesDiv">
       <p>{notReady}</p>
