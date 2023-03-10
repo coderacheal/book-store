@@ -8,7 +8,7 @@ const categoriesSlicer = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    notAvailable: (state) => 'Under Construction',
+    notAvailable: () => 'Under Construction',
   },
 });
 
