@@ -19,7 +19,7 @@ const Book = ({
             <p className="commentRemoveEditEffects">Comments</p>
             <button
               type="button"
-              className="commentRemoveEditEffects"
+              className="removeBookButton"
               onClick={() => dispatch(removeBook(item_id))}
             >
               Remove

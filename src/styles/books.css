@@ -41,6 +41,17 @@
   font-size: 20px;
 }
 
+.removeBookButton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 200;
+  color: #4386bf;
+  font-size: 14px;
+}
+
 .commentRemoveEditDiv {
   width: 70%;
   display: grid;
@@ -119,13 +130,6 @@ p {
 .progressButton:active {
   opacity: 0.7;
 }
-
-/* .progressButton:active {
-  background-color: #0290ff;
-  color: white;
-  border: 1px solid #0290ff;
-  transition: 1s;
-} */
 
 .commentRemoveEdit {
   border-left: 2px solid #cecece;
