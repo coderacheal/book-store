@@ -70,12 +70,8 @@
 }
 
 .ring {
-  /* border: 4px solid #0c87f3; */
   width: 60px;
   height: 60px;
-  /* border-radius: 60%; */
-  /* border-width: 5px; */
-  /* border-left-color: #dedada; */
 }
 
 .percent {
