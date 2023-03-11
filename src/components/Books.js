@@ -1,17 +1,29 @@
+/* eslint-disable camelcase */
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 import '../styles/books.css';
-import Form from './Form';
 
-const Books = () => (
-  <div className="booksDiv">
+const Book = ({
+  item_id, title, author, category,
+}) => {
+  const dispatch = useDispatch();
+  return (
     <div className="eachBookDiv">
       <div className="eachBook">
         <div className="bookDetails">
-          <p className="genre">Action</p>
-          <p className="bookTitle">The Hunger Games</p>
-          <p>Susanne Collins</p>
+          <p className="genre">{category}</p>
+          <p className="bookTitle">{title}</p>
+          <p>{author}</p>
           <div className="commentRemoveEditDiv">
             <p className="commentRemoveEditEffects">Comments</p>
-            <p className="commentRemoveEditEffects">Remove</p>
+            <button
+              type="button"
+              className="removeBookButton"
+              onClick={() => dispatch(removeBook(item_id))}
+            >
+              Remove
+            </button>
             <p className="commentRemoveEditEffects">Edit</p>
           </div>
         </div>
@@ -32,66 +44,18 @@ const Books = () => (
         </div>
       </div>
     </div>
-    <div className="eachBookDiv">
-      <div className="eachBook">
-        <div className="bookDetails">
-          <p className="genre">Science Fiction</p>
-          <h2 className="bookTitle">Dune</h2>
-          <p>Frank Herbert</p>
-          <div className="commentRemoveEditDiv">
-            <p className="commentRemoveEditEffects">Comments</p>
-            <p className="commentRemoveEditEffects">Remove</p>
-            <p className="commentRemoveEditEffects">Edit</p>
-          </div>
-        </div>
-        <div className="completedRing">
-          <div className="ring">.</div>
-          <div>
-            <h2 className="percent">8%</h2>
-            <span>Completed</span>
-          </div>
-        </div>
-        <div className="currentChapter">
-          <div className="line">.</div>
-          <div>
-            <p className="chapterDetails">CURRENT CHAPTER</p>
-            <p className="chapterNumber">Chapter 3: &quot; A Lesson Learned &quot;</p>
-            <button type="button" className="progressButton">UPDATE PROGRESS</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="eachBookDiv">
-      <div className="eachBook">
-        <div className="bookDetails">
-          <p className="genre">Economy</p>
-          <h2 className="bookTitle">Capital in the Twenty-First Century</h2>
-          <p>Susanne Collins</p>
-          <div className="commentRemoveEditDiv">
-            <p className="commentRemoveEditEffects">Comments</p>
-            <p className="commentRemoveEditEffects">Remove</p>
-            <p className="commentRemoveEditEffects">Edit</p>
-          </div>
-        </div>
-        <div className="completedRing">
-          <div className="ring">.</div>
-          <div>
-            <h2 className="percent">0%</h2>
-            <span>Completed</span>
-          </div>
-        </div>
-        <div className="currentChapter">
-          <div className="line">.</div>
-          <div>
-            <p className="chapterDetails">CURRENT CHAPTER</p>
-            <p className="chapterNumber">Introduction</p>
-            <button type="button" className="progressButton">UPDATE PROGRESS</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <Form />
-  </div>
-);
+  );
+};
 
-export default Books;
+Book.propTypes = {
+  item_id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string,
+};
+
+Book.defaultProps = {
+  category: 'Non-Fiction',
+};
+
+export default Book;

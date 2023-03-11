@@ -41,6 +41,17 @@
   font-size: 20px;
 }
 
+.removeBookButton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 200;
+  color: #4386bf;
+  font-size: 14px;
+}
+
 .commentRemoveEditDiv {
   width: 70%;
   display: grid;
@@ -103,7 +114,8 @@ p {
 }
 
 .progressButton,
-.addBookButton {
+.addBookButton,
+.constructionButton {
   margin-top: 10px;
   width: 11.5rem;
   height: 2.063rem;
@@ -113,13 +125,11 @@ p {
   color: white;
   border: 0;
   cursor: pointer;
-  transition: 1s;
 }
 
-.progressButton:hover {
+.progressButton:active {
   background-color: white;
   color: #0290ff;
-  border: 1px solid #0290ff;
 }
 
 .commentRemoveEdit {
