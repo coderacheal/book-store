@@ -17,7 +17,7 @@ export const getBooksFromAPI = createAsyncThunk(
 );
 
 export const postToAPI = createAsyncThunk(
-  'postBooks', async (booksObject) => (
+  'postBooks', (booksObject) => (
     fetch(`${BASE_URL}/books`, {
       method: 'POST',
       body: JSON.stringify(booksObject),
@@ -54,11 +54,11 @@ const booksSlice = createSlice({
         return { ...state, isLoading: false, booksList: booksArr };
       })
       .addCase(postToAPI.fulfilled, (state, action) => {
-        const { item_id: id, ...rest } = action.payload;
+        const { item_id: id, ...oldBooks } = action.payload;
         const addedBook = {
-          id, ...rest,
+          id, ...oldBooks,
         };
-        return state.booksList.push(addedBook);
+        state.booksList.push(addedBook);
       })
       .addCase(removeBookFromAPI.fulfilled, (state, action) => {
         const id = action.payload;
@@ -67,16 +67,5 @@ const booksSlice = createSlice({
       });
   },
 });
-
-// [removeBook.fulfilled]: (state, action) => {
-//   const id = action.payload;
-//   const filteredBooks = state.books.filter((book) => (book.id !== id));
-//   return {
-//     ...state,
-//     books: state.books.filter((book) => (book.itemId !== id)),
-//     books: filteredBooks,
-//   };
-
-// export const { addBook, removeBook } = booksSlice.actions;
 
 export default booksSlice.reducer;

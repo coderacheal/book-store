@@ -1,13 +1,18 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { postToAPI } from '../redux/books/booksSlice';
+import { postToAPI, getBooksFromAPI } from '../redux/books/booksSlice';
+// import { getBooksFromAPI } from '../redux/books/booksSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+
+  useEffect(() => {
+    dispatch(getBooksFromAPI());
+  }, [dispatch]);
 
   const categories = ['Science Fiction', 'Supernatural', 'Fiction', 'Non-Fiction', 'Romance', 'Fantasy', 'Economics'];
   const randomCategory = Math.floor(Math.random() * categories.length);
