@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import '../styles/books.css';
 import { removeBookFromAPI } from '../redux/books/booksSlice';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
@@ -28,7 +30,7 @@ const Book = ({ book }) => {
           </div>
         </div>
         <div className="completedRing">
-          <div className="ring">.</div>
+          <div className="ring"><CircularProgressbar /></div>
           <div>
             <h2 className="percent">64%</h2>
             <span>Completed</span>
