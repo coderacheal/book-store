@@ -1,21 +1,23 @@
-import React from 'react';
-// import booksReducer from '../redux/books/booksSlice';
-import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Books';
 import Form from './Form';
+import { getBooksFromAPI } from '../redux/books/booksSlice';
 
 const BooksContainer = () => {
   const { booksList } = useSelector((store) => store.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooksFromAPI());
+  }, [dispatch]);
 
   return (
     <div className="booksDiv">
       {booksList.map((book) => (
         <Book
-          key={uuidv4()}
-          title={book.title}
-          author={book.author}
-          item_id={book.item_id}
+          key={book.id}
+          book={book}
         />
       ))}
       <Form />

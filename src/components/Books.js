@@ -1,13 +1,13 @@
-/* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
 import '../styles/books.css';
+import { removeBookFromAPI } from '../redux/books/booksSlice';
 
-const Book = ({
-  item_id, title, author, category,
-}) => {
+const Book = ({ book }) => {
   const dispatch = useDispatch();
+  const {
+    id, title, author, category,
+  } = book;
   return (
     <div className="eachBookDiv">
       <div className="eachBook">
@@ -20,7 +20,7 @@ const Book = ({
             <button
               type="button"
               className="removeBookButton"
-              onClick={() => dispatch(removeBook(item_id))}
+              onClick={() => dispatch(removeBookFromAPI(id))}
             >
               Remove
             </button>
@@ -48,14 +48,12 @@ const Book = ({
 };
 
 Book.propTypes = {
-  item_id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  category: PropTypes.string,
-};
-
-Book.defaultProps = {
-  category: 'Non-Fiction',
+  book: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default Book;
