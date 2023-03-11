@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import '../styles/books.css';
-import { removeBookFromAPI } from '../redux/books/booksSlice';
 import { CircularProgressbar } from 'react-circular-progressbar';
+import { removeBookFromAPI } from '../redux/books/booksSlice';
 import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({ book }) => {
