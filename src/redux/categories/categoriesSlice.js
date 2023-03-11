@@ -8,7 +8,7 @@ const categoriesSlicer = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    checkStatus: () => ['Page Under Construction'],
+    checkStatus: () => ({ underconstruction: ['Under Construction'] }),
   },
 });
 
